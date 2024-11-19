@@ -1,6 +1,6 @@
    
    
-   
+   var form = document.getElementById('form');
    // Mouse Events: Detect when a button is hovered over and when the hover ends. Display messages for each state.
    
    var hoverButton = document.getElementById('hoverButton');
@@ -26,3 +26,65 @@
   
     displayArea.textContent = event.key;
     });
+
+
+    // Form Events: Handle form submission, preventing the default behavior and displaying a submission message.
+
+
+
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    var form = document.getElementById('form');
+    var submissionMessage = document.getElementById('submissionMessage');
+
+  
+    form.addEventListener('submit', function(event) {
+        event.preventDefault();
+
+
+        submissionMessage.textContent = "Form submitted successfully!";
+    });
+});
+
+
+
+// Focus Events: Update a message when an input field gains or loses focus.
+
+function validateEmail() {
+    var email = document.getElementById('emailInput');
+    var emailValue = email.value.trim();
+    var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+
+    if (emailPattern.test(emailValue)) {
+        email.style.backgroundColor = 'green'; 
+    } else {
+        email.style.backgroundColor = 'pink'; ``
+        console.log('Invalid email.');
+    }
+}
+
+
+
+
+
+// Event Delegation: Use a container element with several buttons. Use event delegation to handle clicks on any button in the container and display a unique message for each.
+
+
+
+const container = document.getElementById('container');
+
+container.addEventListener('click', function(event) {
+   
+    if (event.target.tagName === 'BUTTON') {
+        alert('You clicked: ' + event.target.textContent);
+     
+        event.target.style.backgroundColor = 'yellow'; 
+    }
+});
+
+
+
+
+ 

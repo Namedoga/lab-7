@@ -14,25 +14,25 @@
 
 
 
-    <form action="#" method="POST">
+    <form action="#" method="POST" id="myForm">
         <label for="textInput">Full Name:</label> 
         <input type="text" id="textInput"  required><br><br>      
 
 
-        <label for="email">Email Address:</label>
-        <input type="email" id="email" name="email" required><br><br>
-        
-        <label for="password">Password:</label>
-        <input type="password" id="password" name="password" required><br><br>
-        
+        <label for="emailInput">Enter your email:</label>
+        <input type="text" id="emailInput" onblur="validateEmail()">
+    
+  
         <fieldset>
             <legend>Gender:</legend>
             <label><input type="radio" name="gender" value="male" required> Male</label>
             <label><input type="radio" name="gender" value="female"> Female</label>
             <label><input type="radio" name="gender" value="other"> Other</label>
         </fieldset><br>
-        
+
    
+        
+        <button type="submit">Submit</button>
 
         <p id="displayArea">Last key pressed: None</p>
    
@@ -40,7 +40,16 @@
     </form>
     
 
+    <!-- Event Delegation:
+ -->
+ <div id="container">
+    <button>Button 1</button>
+    <button>Button 2</button>
+    <button>Button 3</button>
+</div>
 
+
+    <p id="submissionMessage"></p> 
 
 
     <script src="scripts.js"></script>
