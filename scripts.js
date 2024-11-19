@@ -13,3 +13,16 @@
             this.style.backgroundColor = 'transparent';
               hoverButton.textContent = "Hover Over Me"
         });
+
+
+
+    // Keyboard Events: Capture input from a text field, displaying the last key pressed.
+
+
+    var form = document.getElementById('form');
+    var textInput = document.getElementById('textInput');
+    var displayArea = document.getElementById('displayArea')
+    textInput.addEventListener('keydown', function(event) {
+  
+    displayArea.textContent = event.key;
+    });
